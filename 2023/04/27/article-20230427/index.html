@@ -1,0 +1,313 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>这操作有点东西 (2) | Biols's Blog</title><meta name="author" content="Shuo Li,shiyeyishang@outlook.com"><meta name="copyright" content="Shuo Li"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="关于基因组注释一些个人分析步骤。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="这操作有点东西 (2)">
+<meta property="og:url" content="https://wq-ls.github.io/2023/04/27/article-20230427/index.html">
+<meta property="og:site_name" content="Biols&#39;s Blog">
+<meta property="og:description" content="关于基因组注释一些个人分析步骤。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+<meta property="article:published_time" content="2023-04-26T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-04-27T05:06:46.534Z">
+<meta property="article:author" content="Shuo Li">
+<meta property="article:tag" content="genome">
+<meta property="article:tag" content="bioinformatics">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://wq-ls.github.io/2023/04/27/article-20230427/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wq-ls/wq-ls.github.io@main/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"MTYZKEINYQ","apiKey":"38f251a12a243857916c51d7d8997469","indexName":"publii","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '这操作有点东西 (2)',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-04-27 13:06:46'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://lishuo-pic.oss-cn-qingdao.aliyuncs.com/img/20230109154331.JPG" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-history"></i><span> History</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-comments"></i><span> Comments</span></a></div><div class="menus_item"><a class="site-page" href="/laboratory/"><i class="fa-fw fas fa-university"></i><span> Laboratory</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Biols's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-history"></i><span> History</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-comments"></i><span> Comments</span></a></div><div class="menus_item"><a class="site-page" href="/laboratory/"><i class="fa-fw fas fa-university"></i><span> Laboratory</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">这操作有点东西 (2)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-04-26T16:00:00.000Z" title="发表于 2023-04-27 00:00:00">2023-04-27</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-04-27T05:06:46.534Z" title="更新于 2023-04-27 13:06:46">2023-04-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Biology/">Biology</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="这操作有点东西 (2)"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/2023/04/27/article-20230427/#post-comment"><span class="waline-comment-count" data-path="/2023/04/27/article-20230427/"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>拖更好久的使用<strong>三代全长转录组</strong>注释基因组的一些思路，又结合一些其他测试的软件使用情况，做一个基因组注释的个人使用流程汇总。</p>
+<p>首先通俗解释一下<strong>基因组注释</strong>：我们对一个物种进行基因组测序，组装得到的初步基因组序列是一本由“ATGC”组成的“天书”。我们需要进一步对这本“天书”进行“注解”，定义哪一页哪一行具体代表什么含义，也就是搜寻并定义基因组原件，得到其在基因组上的位置、序列、结构、功能等信息。</p>
+<p>一般主要步骤为：重复序列鉴定 &#x3D;&#x3D;&gt; 基于  <em>de novo</em> ，RNA 和 homology 方法进行基因结构预测 &#x3D;&#x3D;&gt; 基因功能注释。</p>
+<p>当然还有一些其他注释环节，比如非编码RNA 注释，启动子预测，假基因预测等，本文内容暂不涉及。</p>
+<h2 id="重复序列注释"><a href="#重复序列注释" class="headerlink" title="重复序列注释"></a>重复序列注释</h2><p>集合重复序列注释的 pipeline 在 github 上有不少，这里提两个：<br>EDTA：<a target="_blank" rel="noopener" href="https://github.com/oushujun/EDTA">https://github.com/oushujun/EDTA</a><br><img src="https://lishuo-pic.oss-cn-qingdao.aliyuncs.com/img/20230427102102.png" alt="EDTA"><br>EarlGrey：<a target="_blank" rel="noopener" href="https://github.com/TobyBaril/EarlGrey">https://github.com/TobyBaril/EarlGrey</a><br><img src="https://lishuo-pic.oss-cn-qingdao.aliyuncs.com/img/20230427102058.png" alt="EarlGrey"></p>
+<p>正好有个朋友在公众号分享了这两个软件测试后感受，见其公众号文章 <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/dHpfNUIF1D99T4IIBNNzQQ">基因组重复序列注释EDTA和EarlGrey问题一二</a>。测试完两个软件后，他还是选择走了公司用的重复序列流程注释路子。可见公司的商业流程历经完善，满足客户需求，还是有一定道理的。</p>
+<p>和他交流过程中，总结出几个问题和想法：</p>
+<ol>
+<li>不同软件对于不同 class 的 transposable element (TE) 有一定偏好性；</li>
+<li>动物和植物的重复序列有一定区别，有些软件适用性也与库有关，选好各自适用的软件；</li>
+<li>许多 Unknown 分类的 TE。可以使用 <a target="_blank" rel="noopener" href="https://github.com/LiLabAtVT/DeepTE">DeepTE</a> 或其他分类软件对 TE 再分类，之后重新对结果统计。</li>
+<li>由于 TE 的嵌套，最后注释结果 TE 有很多 overlap。去冗余的话，可以试试 <a target="_blank" rel="noopener" href="https://github.com/shohei-kojima/collapse_RepeatMasker_annotation">collapse_RM_annotation.py</a>。RepeatMasker 自己流程里的 <a target="_blank" rel="noopener" href="https://github.com/rmhubley/RepeatMasker/blob/master/util/RM2Bed.py">RM2Bed.py</a> 也能部分实现冗余统计的功能。还有这位国外大神写的处理 RepeatMasker 结果的脚本也很实用 <a target="_blank" rel="noopener" href="https://github.com/4ureliek/Parsing-RepeatMasker-Outputs">Parsing-RepeatMasker-Outputs</a></li>
+</ol>
+<h2 id="基于-RNA-数据注释"><a href="#基于-RNA-数据注释" class="headerlink" title="基于 RNA 数据注释"></a>基于 RNA 数据注释</h2><p>无论是 二代RNA-seq 数据，还是三代 full-length transcriptome 数据注释的基本思路大都是将转录组数据比对到基因组上，组装转录本序列，预测基因 ORF 结构，坐标位置整合基因组上。</p>
+<h3 id="RNA-seq"><a href="#RNA-seq" class="headerlink" title="RNA-seq"></a>RNA-seq</h3><p>注释思路如下：</p>
+<ol>
+<li>尽量选择更多多样性的 RNA 数据（不同组织，不同时期），使用 hisat2 比对得到 bam 文件；</li>
+<li>组装转录本序列有两条路子：<ul>
+<li>stringtie 软件 组装转录本序列；</li>
+<li>trinity 软件 根据 bam 文件，进行有参的方式组装转录本序列；</li>
+</ul>
+</li>
+<li>对转录本序列使用 TransDecoder 预测 ORF；</li>
+<li>使用 TransDecoder 的 <a target="_blank" rel="noopener" href="https://github.com/TransDecoder/TransDecoder/blob/master/util/cdna_alignment_orf_to_genome_orf.pl">cdna_alignment_orf_to_genome_orf.pl 脚本</a>，整合最终注释 gff 文件。</li>
+</ol>
+<h3 id="full-length-transcriptome"><a href="#full-length-transcriptome" class="headerlink" title="full-length transcriptome"></a>full-length transcriptome</h3><p>注释思路如下：</p>
+<ol>
+<li>使用 GMAP 软件将组装好的全长转录本序列比对到基因组上，结果输出为 gff 格式；</li>
+<li>gff 过滤。</li>
+</ol>
+<ul>
+<li>因为GMAP 这样的输出结果中会有很多短于 3 碱基长度的 exon&#x2F;CDS 结果，我觉得不太可靠，一般过滤短于 9 碱基长度的 exon；</li>
+<li>去除一些存在 overlap 的冗余信息；</li>
+<li>使用 gffread 软件 -N 参数去除具有非规范剪接位点 (i.e. not GT-AG, GC-AG or AT-AC) 的mRNA 信息。</li>
+</ul>
+<p><strong>PS：</strong></p>
+<ol>
+<li>其实 RNA-seq 和 full-length transcriptome 注释方法有些步骤都能交叉使用；</li>
+<li>full-length transcriptome 组装的全长转录本序列可以先 cd-hit 去冗余后，再比对到基因组上，我一般使用的参数：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd-hit-est -i &lt;input&gt; -o &lt;output&gt; -c 0.99 -T 6 -G 0 -aL 0.90 -AL 100 -aS 0.99 -AS 30</span><br></pre></td></tr></table></figure></li>
+<li>使用Pacbio 的 Iso-Seq 组装结果，我也会将 singletons 序列用于注释。</li>
+</ol>
+<h2 id="homology-同源注释方法"><a href="#homology-同源注释方法" class="headerlink" title="homology 同源注释方法"></a>homology 同源注释方法</h2><p>注释思路如下：</p>
+<ol>
+<li>选择 2-3 个近源物种的各自全部蛋白序列，使用 blat 比对后，再使用 genewise 预测。这个方法比较慢，也比较耗比对资源。</li>
+<li>李恒大神的 <a target="_blank" rel="noopener" href="https://github.com/lh3/miniprot">miniprot</a> 推荐可以试试，一个字——“快”，准确性也较高。因为最后都会用其他软件将这些结果整合到一起，也不用过于追求完美准确性。<br><img src="https://lishuo-pic.oss-cn-qingdao.aliyuncs.com/img/20230427120620.png" alt="miniprot"></li>
+</ol>
+<p><strong>PS：</strong><br>这些结果其实也都可以用 gffread 软件 -N 参数过滤一遍。</p>
+<h2 id="de-novo-注释"><a href="#de-novo-注释" class="headerlink" title="de novo  注释"></a><em>de novo</em>  注释</h2><p>主要就推荐 AUGUSTUS 软件<br>注释思路如下：</p>
+<ol>
+<li>根据 AUGUSTUS 训练集选择标准，从 RNA 数据组装的转录本序列中选择基因序列进行训练。一些步骤可以参考这个推文：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/679bd6bb0ea4">AUGUSTUS模型训练</a>。</li>
+<li>训练完，基于模型从头预测就完事儿。</li>
+</ol>
+<h2 id="整合-de-novo-，RNA-和-homology-注释结果"><a href="#整合-de-novo-，RNA-和-homology-注释结果" class="headerlink" title="整合 de novo ，RNA 和 homology 注释结果"></a>整合 <em>de novo</em> ，RNA 和 homology 注释结果</h2><p>EvidenceModeler(EVM)，GLEAN，maker 都能用来整合上面不同数据注释结果。<br>对于整合结果处理：</p>
+<ol>
+<li>整合后，基因数目很少。优先从 RNA 数据注释结果中补充。</li>
+<li>整合后，基因数目异常多。<ul>
+<li>基因结构不完整的可以考虑去除；</li>
+<li>结合证据来源数目和基因是否有功能去除。比如一个基因只有  *de novo * 注释结果来源支持，并且与公共数据库比对没有结果，可以考虑去除。</li>
+</ul>
+</li>
+<li>不同物种基因组的基因数目有差异，参考近源物种基因数目增删结果。</li>
+</ol>
+<h2 id="基因功能注释"><a href="#基因功能注释" class="headerlink" title="基因功能注释"></a>基因功能注释</h2><p>虽然通过上面方法得到了基因组的基因序列，但是得到基因具体是什么基因，有什么功能，仍不清楚。这就需要进一步和一些公众数据库比对，确定基因功能。<br>注释思路如下：</p>
+<ol>
+<li>EggNOG 和 KEGG 都可以在线批量注释，就是得排队，比较慢；</li>
+<li>自己本地下载数据最新文件，使用 diamond 构建索引，再比对就完事儿。</li>
+<li>KEGG 和 GO 富集分析背景文件制作，其实就是将基因 ID 和对应 pathway 或者 term 关联起来。以 <a target="_blank" rel="noopener" href="https://omabrowser.org/oma/current/">OMA 数据库</a>为例。<br>OMA 数据库中定义的序列 ID 各自有对应 GO term 号，<br><img src="https://lishuo-pic.oss-cn-qingdao.aliyuncs.com/img/20230427124610.png" alt="OMA1"><br>dimond 比对过滤后的结果有基因组基因 ID 和 OMA 数据库中定义的序列 ID 匹配的信息，<br><img src="https://lishuo-pic.oss-cn-qingdao.aliyuncs.com/img/20230427124907.png" alt="dimond"><br>两个文件关联，替换 ID 名字，完事儿。<br><img src="https://lishuo-pic.oss-cn-qingdao.aliyuncs.com/img/20230427125253.png" alt="关联"></li>
+</ol>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/genome/">genome</a><a class="post-meta__tags" href="/tags/bioinformatics/">bioinformatics</a></div><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2023/03/01/article-20230301/"><img class="prev-cover" src="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">这操作有点东西 (1)</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Waline</span><span class="switch-btn"></span><span class="second-comment">Twikoo</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://lishuo-pic.oss-cn-qingdao.aliyuncs.com/img/20230109154331.JPG" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Shuo Li</div><div class="author-info__description">Biology</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/wq-ls" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:shiyeyishang@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E5%A4%8D%E5%BA%8F%E5%88%97%E6%B3%A8%E9%87%8A"><span class="toc-number">2.</span> <span class="toc-text">重复序列注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E-RNA-%E6%95%B0%E6%8D%AE%E6%B3%A8%E9%87%8A"><span class="toc-number">3.</span> <span class="toc-text">基于 RNA 数据注释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#RNA-seq"><span class="toc-number">3.1.</span> <span class="toc-text">RNA-seq</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#full-length-transcriptome"><span class="toc-number">3.2.</span> <span class="toc-text">full-length transcriptome</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#homology-%E5%90%8C%E6%BA%90%E6%B3%A8%E9%87%8A%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">homology 同源注释方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#de-novo-%E6%B3%A8%E9%87%8A"><span class="toc-number">5.</span> <span class="toc-text">de novo  注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E5%90%88-de-novo-%EF%BC%8CRNA-%E5%92%8C-homology-%E6%B3%A8%E9%87%8A%E7%BB%93%E6%9E%9C"><span class="toc-number">6.</span> <span class="toc-text">整合 de novo ，RNA 和 homology 注释结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E5%9B%A0%E5%8A%9F%E8%83%BD%E6%B3%A8%E9%87%8A"><span class="toc-number">7.</span> <span class="toc-text">基因功能注释</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/04/27/article-20230427/" title="这操作有点东西 (2)"><img src="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="这操作有点东西 (2)"/></a><div class="content"><a class="title" href="/2023/04/27/article-20230427/" title="这操作有点东西 (2)">这操作有点东西 (2)</a><time datetime="2023-04-27T05:06:46.534Z" title="更新于 2023-04-27 13:06:46">2023-04-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/02/23/article-20230223/" title="从基因聊起(4)"><img src="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从基因聊起(4)"/></a><div class="content"><a class="title" href="/2023/02/23/article-20230223/" title="从基因聊起(4)">从基因聊起(4)</a><time datetime="2023-03-04T01:44:48.438Z" title="更新于 2023-03-04 09:44:48">2023-03-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/01/article-20230301/" title="这操作有点东西 (1)"><img src="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="这操作有点东西 (1)"/></a><div class="content"><a class="title" href="/2023/03/01/article-20230301/" title="这操作有点东西 (1)">这操作有点东西 (1)</a><time datetime="2023-03-01T10:56:52.811Z" title="更新于 2023-03-01 18:56:52">2023-03-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/01/06/article-20230106/" title="从基因聊起(2)"><img src="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从基因聊起(2)"/></a><div class="content"><a class="title" href="/2023/01/06/article-20230106/" title="从基因聊起(2)">从基因聊起(2)</a><time datetime="2023-01-12T03:04:25.558Z" title="更新于 2023-01-12 11:04:25">2023-01-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/01/11/article-20230112/" title="GEO上传RNA-seq数据&quot;指北&quot;"><img src="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GEO上传RNA-seq数据&quot;指北&quot;"/></a><div class="content"><a class="title" href="/2023/01/11/article-20230112/" title="GEO上传RNA-seq数据&quot;指北&quot;">GEO上传RNA-seq数据&quot;指北&quot;</a><time datetime="2023-01-12T02:55:10.114Z" title="更新于 2023-01-12 10:55:10">2023-01-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/01/11/article-20230111/" title="从基因聊起(3)"><img src="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从基因聊起(3)"/></a><div class="content"><a class="title" href="/2023/01/11/article-20230111/" title="从基因聊起(3)">从基因聊起(3)</a><time datetime="2023-01-12T02:54:47.288Z" title="更新于 2023-01-12 10:54:47">2023-01-12</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2')"><div id="footer-wrap"><div class="copyright">&copy;2023 By Shuo Li</div><div class="footer_custom_text">继往圣之绝学</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/gh/wq-ls/wq-ls.github.io@main/js/utils.js"></script><script src="https://cdn.jsdelivr.net/gh/wq-ls/wq-ls.github.io@main/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="https://cdn.jsdelivr.net/gh/wq-ls/wq-ls.github.io@main/js/search/algolia.js"></script><div class="js-pjax"><script>function loadWaline () {
+  function insertCSS () {
+    const link = document.createElement("link")
+    link.rel = "stylesheet"
+    link.href = "https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.css"
+    document.head.appendChild(link)
+  }
+
+  function initWaline () {
+    const waline = Waline.init(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://21gqau.deta.dev',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: true,
+    }, null))
+  }
+
+  if (typeof Waline === 'function') initWaline()
+  else {
+    insertCSS()
+    getScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.js').then(initWaline)
+  }
+}
+
+if ('Waline' === 'Waline' || !false) {
+  if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+  else setTimeout(loadWaline, 0)
+} else {
+  function loadOtherComment () {
+    loadWaline()
+  }
+}</script><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo-comment-eta.vercel.app/',
+      region: 'ap-shanghai',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo-comment-eta.vercel.app/',
+      region: 'ap-shanghai',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Waline' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
